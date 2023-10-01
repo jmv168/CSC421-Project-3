@@ -40,6 +40,12 @@ void pirate_ship() {
 	exit(0) ;
 }
 
+//void test_values(int secret) {
+//    PIRATE_SECRET = secret;
+//    there_be_pirates = 1;
+//    caribbean_voyage();
+//}
+
 int main(int argc, char * argv[]) {
 
 	// pirate programming. it is often the case that a function
@@ -51,6 +57,14 @@ int main(int argc, char * argv[]) {
 	
 	// YOU HAVE TO CHANGE 0 TO THE PROPER FUNCTION
 	return_to = (long int)pirate_ship;
+
+	//for(int i = 0; i < 10; i++) {                      // Used this for loop to test possible values of PIRATE_SECRET
+        //	printf("Testing PIRATE_SECRET value: %d\n", i);
+        //	test_values(i);
+    	//}
+
+    	// Check if any value worked
+    	//printf("No values worked\n");
 
 	caribbean_voyage() ;
 	printf("There were no pirates.\n") ;

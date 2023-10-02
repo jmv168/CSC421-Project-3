@@ -39,7 +39,7 @@ void pirate_ship() {
 	printf("*** You have been boarded by pirate Long John von Neumann! ***\n\n") ;
 	exit(0) ;
 }
-
+// Test if the value would work by assigning PIRATE_SECRET different values
 //void test_values(int secret) {
 //    PIRATE_SECRET = secret;
 //    there_be_pirates = 1;

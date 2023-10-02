@@ -63,7 +63,7 @@ int main(int argc, char * argv[]) {
         //	test_values(i);
     	//}
 
-    	// Check if any value worked
+    	// If no values worked, this was printed
     	//printf("No values worked\n");
 
 	caribbean_voyage() ;

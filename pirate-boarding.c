@@ -20,8 +20,8 @@ long int there_be_pirates = 0 ;
 
 
 // FIND THE PIRATE SECRET THAT ALLOWS Long John Von Neumann to board the ship!
-
-#define PIRATE_SECRET 3
+// Found value using for loop, explanation below
+#define PIRATE_SECRET 3  
 
 
 void caribbean_voyage() {

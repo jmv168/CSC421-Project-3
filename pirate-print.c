@@ -17,12 +17,14 @@ char ** location ;
 int there_be_pirates = 0 ;
 
 // FIND THE PIRATE SECRET THAT ALLOWS Long John Von Neumann to print There Be Pirates!!
-
-#define PIRATE_SECRET 0
+// Calculated value of the pirate secret, explanation below
+#define PIRATE_SECRET 44 
 
 void pirate_boarding(void) {
 	int stack_marker ;
-	char * ip = (char *) &stack_marker ;
+	//printf("stack_marker addr: %p\n", &stack_marker); // Used to find address of stack marker
+	//printf("location addr: %p\n", location); // Used to find address of location, the difference between both addrs 
+	char * ip = (char *) &stack_marker ;     // is the pirate_secret, it was 0x2C which is 44 in decimal
     *(ip+PIRATE_SECRET) = "*** There be pirates! ***" ;	
 	return ;
 }
@@ -30,7 +32,7 @@ void pirate_boarding(void) {
 void print_it(char * string_pointer_on_stack) {
 
 	// YOU HAVE TO CHANGE 0 TO & OF THE PROPER VARIABLE
-	location = 0 ;
+	location = &string_pointer_on_stack; // Captures location of string pointer to calculate offset
 	
 	if (there_be_pirates) {
 		pirate_boarding() ;
